@@ -1,0 +1,32 @@
+{
+  "name": "react-2",
+  "version": "1.0.0",
+  "description": "Food ordering app from scratch",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/njdasa/Food-Ordering-App.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Nayan Jyoti Das",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/njdasa/Food-Ordering-App/issues"
+  },
+  "homepage": "https://github.com/njdasa/Food-Ordering-App#readme",
+  "dependencies": {
+    "parcel": "^2.10.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}
