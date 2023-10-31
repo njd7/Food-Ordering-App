@@ -3,6 +3,7 @@
 }
 .card {
   width: 400px;
+  height: 460px;
   border: 1px solid rgb(219, 216, 216);
   padding: 5px;
   cursor: pointer;
@@ -15,11 +16,15 @@
 .resContainer {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 .cardImg {
   margin-left: 8px;
   margin-top: 5px;
   width: 380px;
+  height: 250px;
+  object-position: 10%;
+  object-fit: cover;
 }
 .logo {
   height: 200px;
@@ -37,4 +42,25 @@
 ul > li {
   list-style: none;
   padding: 10px;
+  font-size: xx-large;
+}
+
+.shimmer-card {
+  width: 400px;
+  border: 1px solid rgb(255, 255, 255);
+  padding: 5px;
+  background-color: #f0f0f0;
+  margin: 10px;
+  height: 460px;
+}
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.btn-login {
+  padding: 0 20px;
+  font-size: x-large;
+  cursor: pointer;
 }
