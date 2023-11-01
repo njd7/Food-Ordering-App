@@ -9,9 +9,12 @@
   cursor: pointer;
   background-color: #f0f0f0;
   margin: 10px;
+  border-radius: 10px;
 }
 .card:hover {
   border: 1px solid black;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2),
+    0 10px 10px 0 rgba(0, 0, 0, 0.19);
 }
 .resContainer {
   display: flex;
@@ -19,12 +22,11 @@
   justify-content: space-around;
 }
 .cardImg {
-  margin-left: 8px;
-  margin-top: 5px;
-  width: 380px;
+  width: 400px;
   height: 250px;
   object-position: 10%;
   object-fit: cover;
+  border-radius: 10px;
 }
 .logo {
   height: 200px;
@@ -48,6 +50,7 @@ ul > li {
 .shimmer-card {
   width: 400px;
   border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
   padding: 5px;
   background-color: #f0f0f0;
   margin: 10px;
