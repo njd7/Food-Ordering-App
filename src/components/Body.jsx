@@ -1,7 +1,8 @@
 import ResCard from "./ResCard";
-// import resList from "../utils/mockData";
 import { useEffect, useState } from "react";
 import ShimmerUI from "./ShimmerUI";
+import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   // const [res, setRes] = useState(resList);
@@ -24,20 +25,24 @@ const Body = () => {
     const json = await data.json();
     console.log(
       "Restaurants:",
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
 
     setRes(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRes(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
   // if (res.length === 0) {
   //   return <ShimmerUI />;
   // }
+  const onlineStatus = useOnlineStatus();
+  if (!onlineStatus) {
+    return <h1>You are Offline!! Please check your network connection.</h1>;
+  }
 
   // conditional rendering
   return res.length === 0 ? (
@@ -73,7 +78,9 @@ const Body = () => {
 
       <div className="resContainer">
         {filteredRes.map((item) => (
-          <ResCard key={item.info.id} cardData={item} />
+          <Link to={"/menu/" + item.info.id} key={item.info.id}>
+            <ResCard key={item.info.id} cardData={item} />
+          </Link>
         ))}
       </div>
     </div>

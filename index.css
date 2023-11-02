@@ -12,7 +12,6 @@
   border-radius: 10px;
 }
 .card:hover {
-  border: 1px solid black;
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2),
     0 10px 10px 0 rgba(0, 0, 0, 0.19);
 }
@@ -29,12 +28,14 @@
   border-radius: 10px;
 }
 .logo {
-  height: 200px;
+  height: 100px;
+  object-position: 50%;
+  object-fit: cover;
 }
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 0px;
 }
 .list {
   display: flex;
@@ -44,7 +45,11 @@
 ul > li {
   list-style: none;
   padding: 10px;
-  font-size: xx-large;
+  font-size: x-large;
+}
+.menuItem {
+  list-style: circle;
+  font-size: medium;
 }
 
 .shimmer-card {
@@ -66,4 +71,8 @@ ul > li {
   padding: 0 20px;
   font-size: x-large;
   cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: black;
 }
