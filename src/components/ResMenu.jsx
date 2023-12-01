@@ -6,7 +6,6 @@ import ShimmerMenuUI from "./ShimmerMenuUI";
 
 const ResMenu = () => {
   const { resId } = useParams();
-  // const resInfo = useState(useResMenu(resId));
 
   const [resInfo, setResInfo] = useState([]);
   const [showIndex, setShowIndex] = useState(null);
